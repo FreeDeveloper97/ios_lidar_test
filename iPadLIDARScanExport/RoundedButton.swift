@@ -24,13 +24,13 @@ class RoundedButton: UIButton {
         backgroundColor = tintColor
         layer.cornerRadius = 8
         clipsToBounds = true
-        setTitleColor(.white, for: [])
+        setTitleColor(.systemBackground, for: [])
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     override var isEnabled: Bool {
         didSet {
-            backgroundColor = isEnabled ? tintColor : .gray
+            backgroundColor = isEnabled ? .clear : .gray
         }
     }
 }
